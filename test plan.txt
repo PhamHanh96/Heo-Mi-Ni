@@ -1,0 +1,31 @@
+﻿- What is a Test Plan?
+(chèn hình)
+- Why use Test Plan? Because making Test Plan has multiple benefits:
++ effort
++ understand
++ guides
++ documented
+- Test plan template:
++ Test plan indentifier
++ Test Items
+
+- How to write a Test Plan?
+(chèn hình)
++ Analyze the product
+(chèn hình)
++ Design the Test Strategy
+(chèn hình)
++ Define the Test Objectives
+(chèn hình)
+ + Define Test Criteria:
+     Suspension Criteria
+     Exit Criteria
++ Resource Planning:
+   Human Resource
+   System Resource   
++ Plan Test Environment:
+   What is the Test Environment?
+  How to setup the Test Environment?
++ Schedule & Estimation
++ Determine Test Deliverables
+(chèn hình)

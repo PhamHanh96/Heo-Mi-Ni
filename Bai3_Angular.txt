@@ -1,0 +1,45 @@
+﻿Angular
+-app/app.component.(ts, html, css, spec.ts): 
+-app modul: chạy modul
+- index.html: ng dùng chạy
+- main.ts: ng lập trình sử dụng
+- polufills.ts: giúp code chạy đc trên nhiều trình duyệt
+- styles.css: style cho tất cả component
+- test.ts: file đầu tiên chạy khi test
+- tsconfig; config
+----------------------------------
+Component là gì?
+- Điều chỉnh 1 phần trên màn hình(view)
+- Có thể chứa nhiều thẻ html
+- Có thể chứa component khác
+- Có thể nhận tham số
+- Có thể rất linh hoạt
+- Lợi ích: dễ quản lý code và tái sử dụng code
+- cách đặt tên: tên.component.ts
+- cách tạo component.ts
++ import{component} from '@angulalr/core';
++@Compopnent({
+   template: '<h3>Hello<h3>',
+   selector: 'app-word'
+})
++ export class WordComponent{}
++ import component này vào app.module.ts:
+import {WordComponent} from './word.component';
+
+---------------------------------
+1. google keep
+- skip: bỏ qua
+- offset
+-sort: sắp xếp
+-keyword: từ khóa tìm kiếm
+- Put: sửa tất cả
+- Patch: sửa 1 phần tử---> để đơn giản, dùng put
+-.Model: loại bỏ những thành phần k cần thiết
+-entity: là thực thể giúp tạo data, chuyển entity thành table tương ứng.
+--------------
+cách tạo data
+-b1: tạo entity
+-b2: tạo model
+-b3: mappingProflife(userRepository)
+-b4: tạo repository(hoặc sd IGenericRepository)
+- b5: lên controllers tạo tên tương ứng

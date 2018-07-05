@@ -1,0 +1,12 @@
+﻿1. Blockchain là gì?
+- là 1 csdl phân tán, như 1 máy tính lớn trên toàn thế giới, nơi mọi ng có thể an toàn truy cập dữ liệu và thực hiện giao dịch.
+----------------------------
+2. Ethereum?
+- Là 1 trong những cty lớn và có uy tín nhất thành lập blockchain
+- Mã nguồn mở nên dễ sd cho các blockchain riêng
+- E k chỉ là một nền tảng mà còn là ngôn ngữ lập trình đang chạytrên 1 blockchain, cta có thể xd và suất bản ứng dụng phân tán đc gọi là DAPPS
+- Ethereum có tgian giao dịch rất nhanh
+- Ethereum có 1 pp để tài trợ các giao dịch tùy thuộc vào sự phức tạp về tính toán, băng thông sử dụng và nhu cầu lưu trữ
+------------------------------
+3. DAPPs(các ứng dụng phân tán)
+- 

@@ -1,0 +1,37 @@
+﻿Bài 1: Git
+- Tạo data quản lí git
+- git status: 
+- git add: đưa file vào trạng thái theo dõi
+- git add.: đưa tất cả các file vào trạng thái theo dõi
+- git commit -m " ": comment
+- git remote add origin https://...(địa chỉ)--> git push origin
+Note: hạn báo cáo:23h59' ngày 4/1/2018
+-----------------------------------
+CÁC CÂU LỆNH HAY DÙNG TRONG GIT
+- git init: khởi tạo git trong một repository
+-git remote -v: xem url của remote repo(từ xa)
+- git remote add origin <url>: để có thể thêm, commit và push đến remote repo của mình
+- git remote set-url origin <url>:dùng khi đổi remote repo
+- git clone<url>: lấy project về
+- git branch: liệt kê tất cả các branch(nhánh) trong local của bạn
+- git branch <tên branch>: tạo nhánh mới
+- git checkout <name>: sẽ chuyển sang một nhánh đã tồn tại khác.
+- git checkout -b <name>: tạo nhánh mới và ngay lập tức chuyển sang nhánh đó.
+- git merge <tên branch>: hợp nhất branch đó vào branch chính-master của bạn
+- git pull origin <branch>: kéo những thay đổi mới nhất về
+- git satus: biết những file nào đã bị thay đổi và file nào được theo dõi.
+- git dif -stat: biết mỗi file đã thay đổi bao nhiêu dòng code.
+----------------------------------
+giI/ CÁC BƯỚC TẠO GIT
+1. Tạo Git trong New repository--> mở cmd, gọi git init
+2. git clone tenduongdan: lấy project về file
+3. git status --> git add --> git commit -m "" -->git status -->git checkout -b tenfile(tạo branch mới)--> git branch(kiểm tra đang đứng nhánh nào)-->git remote add origin tenduongdan -->git checkout tenfile(chỉ tới đường dẫn) -->git branch -->git push origin tenfile(pusl lên nhánh)
+-----------------------------------
+Lỗi gặp khi dùng git:
+- commit gặp rác --> phải xóa, tự merge bằng tay
+- markdown github cheatsheet
+- github readme editor
+- npm install bootstrap --save
+- npm rm bootstrap --save
+- fezvrasta.github.io
+- bootstrap flat design-->bootflat.github.io

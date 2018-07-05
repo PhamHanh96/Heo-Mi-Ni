@@ -1,0 +1,37 @@
+﻿Setup Tasks:
+- Chrome
+- Metamask
+- Visual Studio Code
+- NodeJS Package Manager (NPM)
+- Chocolatey
++ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+-->(điều khiển từ xa)
++  iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
+-->(dowload chocolatey)
++ choco install git -params "/GitAndUnixToolsOnPath"
+-->(cài đặt bằng GitHub)
++ Cài xong tắt đi mở lại để làm mới:(chạy as admin)
+git config --system http.sslverify false
++ dùng npm để cài đặt add-on add-on:
+npm install -g node-gyp
++ làm tương tự với các công cụ xây dựng windows:
+npm install --global --production windows-build-tools
++ cài đặt ethereum để test, gọi là thử nghiệm RPC:
+npm install -g ethereumjs-testrpc
++ cài đặt Truffle:
+npm install -g truffle
+
+-----------------------------
+
+CÁC ĐỊA CHỈ VÀ LỆNH PowerShell đã chạy:
+http://www.google.com/chrome
+https://github.com/Metamask/
+http://code.visualstudio.com
+https://nodejs.org/en/
+https://chocolatey.org/
++ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
++ choco install git -params "/GitAndUnixToolsOnPath"
++ git config --system http.sslverify false
++ npm install --global --production windows-build-tools
++ npm install -g ethereumjs-testrpc
++ npm install -g truffle

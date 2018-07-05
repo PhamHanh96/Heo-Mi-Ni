@@ -1,0 +1,102 @@
+﻿1. Ngôn ngữ: Solidity
+- Solidity là 1 hướng đối tượng JavaScript-phong cách ngôn ngữ
+- có khả năng thừa kế
+Ví dụ:
+contract MyContract
+{
+    unit myData;
+   function setData(unit value)
+  {
+     myData = value;
+  }
+  function getData() returns (unit returnData)
+  {
+    return myData;
+  }
+}
+
++ Booleans: đc hỗ trợ với từ khóa bool và chứa các gtri k đổi của true or false
++ string: 
++ int/uint: 8bit-256bit. Trong 1 số nguyên 8bit, có thể lưu số nguyên từ 0-255; trong 1 int256, có thể lưu trữ số rất rất rất lớn. Nếu k đưa ra kích thước của số  nguyên và chỉ dùng từ khóa int.uint, kích thước tối đa sẽ được sử dụng
++ address: có thể lưu trữ 1 địa chỉ đc sd trong Ethereum. VD như vào 1 tài khoản hoặc hợp đồng.
++ ufixed, ufixed8x8: phải chỉ định số bit mà bạn sẽ sd cho mỗi phần của số
+-------------------
+2. Access Modifiers;
+- Sửa đổi truy cập: từ khóa để đảm bảo rằng mã của bạn chỉ có thể được thực hiện từ nơi bạn mong muốn
++ public: truy cập từ mọi nơi
++ private: giới hạn cá nhân chỉ truy cập vào hợp đồng này
++ internal: hợp đồng này và các hợp đồng có nguồn gốc từ nó có thể truy cập các phương pháp hoặc tài sản
++ external: bên ngoài sẽ k cho phép truy cập nội bộ và làm cho nó chỉ có thể truy cập bên ngoài
+- Mọi thứ trong hợp đồng là hiển thị cho tất cả các nhà quan sát bên ngoài. Chỉ tạo ra 1 cái gì đó để ngăn chặn các hợp đồng khác truy cập và sửa đổi thông tin, nhưng nó vẫn sẽ được nhìn thấy trên toàn thế giới bên ngoài của blockchain. Đây là 1 vd đóng gói số 1 của cấu trúc chính của Solidity:
+
+contract HelloWorld
+{
+   string greeting;
+   function Hello() public returns (string)
+   {
+      greeting = "Hello World!";
+      return greeting;
+   }
+}
+
++ Thứ nhất: nó đc định nghĩa bằng cách sd từ khóa hợp đồng và tên hợp đồng chúng tôi đang sd
++ Có thể có các biến trạng thái và các hàm
++ Các hàm trả về các gtri xác định kiểu trả về
+
+----------------
+3. Truffle
+- Là bộ công cụ khuôn khổ để phát triển, thử nghiệm và như là 1  đường ống cho Ethereum phát triển
+- Trufflel bao gồm công cụ để biên dịch và xây dựng phương pháp của bạn( compile and build). Nó cho phép 1 khuôn khổ cho tự động thử nghiệm(testing) và làm  cho việc triển khai hợp đồng rất đơn giản với hỗ trợ các địa điểm triển khai có thể cấu hình.
+- có thể dùng Truffle  trong console cũng như dễ tương tác trực tiếp vs hợp đồng triển khai của chúng tôi
+- Kiểm tra RPC:
++  là 1 bộ nhớ trong dễ sd trong bộ nhớ đó là rất tốt cho ktra hợp đồng của bạn trong khi phát triển.
++  Ktra RPC thực hiện Ethereum JS là cùng 1 bộ hướng dẫn sẽ tìm thấy trong blockchain Ethereum thực.
++Ktra RPC sẽ tự tạo ra 10 tài khoản thử nghiệm cho bạn vs các khóa cá nhân kết nối.
+----------------
+Demo Hello World
+- tạo thư mục demo: mkdir
++ mkdir demo
++ Tạo thư mục con helloworld: 
+mkdir demo\helloworld
++ Đi vào thư mục :
+cd demo\helloworld
++ Gọi Truffle để bắt đầu giải pháp:
+truffle init
+hoặc:
+truffle unbox metacoin
++ Sau đó mở nó trong Visual Studio Code:
+code .
++ Thêm file helloworld.sol:
+ pragma solidity ^0.4.4;
+contract HelloWorld
+{
+    function SayHello() returns (string)
+    {
+        return ("Hello World!");
+    }
+}
++ Chỉnh sửa thêm trong file 2_deploy_contracts.js:
+var HelloWorld = artifacts.require("./helloworld.sol");
+module.exports = function(deployer)
+{
+    deployer.deployer(HelloWorld);
+}
++ Thêm vô file truffle.js:
+module.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    }
+  }
+};
++ Mở cửa sổ Windows PowerShell mới: chạy lệnh 
+testrpc
++Quay lại cửa sổ Windows PowerShell ban đầu để tiếp tục:
+truffle compile
+truffle migrate
+truffle console
+var hw// đặt tên biến
+HelloWorld.deployed().then(function(deployed){hw=deployed;});// tạo hàm
+hw.SayHello.call()

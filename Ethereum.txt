@@ -1,0 +1,8 @@
+﻿ethereum 1:
+- Là một nền tảng để thực thi các hợp đồng thông minh_ những hợp đồng có sẵn 1 cách tự động mà không cần phải thông qua một trung gian. Vd như máy bán nước tự động.
++ Chứa toàn bộ các điền khoản của hợp đồng 1 cách rõ ràng và công khai
++ Khi đã thực thi 1 hợp đồng thì không thể hủy bỏ hay thay đổi kq đc
+- EVM(Ethereum virtual machine): chứa code và dữ liệu, lưu trên blockchain. Sinh ra nhiên liệu là ether_là nhiên liệu để vận hành máy ảo EVM. 1 ether = 10^18 wei
+- Gas là chi phí phải trả cho EVN khi làm 1 điều gì đó
+- gas price là số ether phải trả cho 1 gas: phí = gas x gas price
+---> Ethereum sinh ra không phải là 1 hệ thống tiền điện tuer như bitcoin. Việc sd Ethereum như 1 đồng tiền để mua bán hàng hóa là k đúng vs thiết kế ban đầu.

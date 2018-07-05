@@ -1,0 +1,11 @@
+﻿Bài 2: html & css
+Note: thiết kế web bán cây cảnh (bt nhóm với Thư và Hiền)
+- cài Nodejs
+- ngrok-stable-window-amd64
+----------------------------
+- cascade của css: thuộc tính cuối cùng đè lên 
+- ưu tiên nhất: inline
+- cách đặt tên css
+- visual studio code (cài đặt)
+- vô project mở cmd, dùng câu lệnh code . để dẫn tới visual studio code của project đó
+- 
